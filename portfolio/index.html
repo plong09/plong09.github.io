@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Link to our external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">your<span>.</span>name</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-greeting">// Hello!</p>
+          <h1 class="hero-name">Junier Gundaya</h1>
+          <p class="hero-role">Computer Science Graduate</p>
+          <p class="hero-bio">
+            A passionate CS grad from Xavier University Ateneo De Cagayan, focused on building clean,
+            efficient web applications. I love solving real-world problems through code and
+            am actively looking for software engineering opportunities.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn-primary">View my projects</a>
+            <a href="#" class="btn-ghost">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <image src="../portfolio/image/mypic.jpg" alt="Junier Gundaya" />
+          <!-- Replace with: <img src="your-photo.jpg" alt="Your Name" /> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">// 01. about</p>
+      <h2 class="section-title">About me</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-photo">
+            <image src="../portfolio/image/mypic.jpg" alt="Junier Gundaya" />
+          </div>
+        
+          <p class="about-card-name">Junier Gundaya</p>
+          <p class="about-card-title">CS Graduate · Cagayan de Oro</p>
+          <div class="about-card-links">
+            <a href="#" class="about-link">GitHub</a>
+            <a href="#" class="about-link">LinkedIn</a>
+            <a href="#" class="about-link">Email</a>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            Hi! I'm Junier Gundaya, a Computer Science graduate from Xavier University Ateneo De Cagayan.
+            I'm passionate about building web applications that are
+            both functional and beautiful.
+          </p>
+          <p>
+            During my studies I focused on software engineering,
+            data structures, and web development. I enjoy working on projects that
+            challenge me and push me to learn new technologies.
+          </p>
+          <p>
+            When I'm not coding, I enjoy djing, producing music
+            and watching tech talks on YouTube.
+          </p>
+          <div class="about-facts">
+            <div class="fact">
+              <p class="fact-label">Degree</p>
+              <p class="fact-value">B.S. Computer Science</p>
+            </div>
+            <div class="fact">
+              <p class="fact-label">University</p>
+              <p class="fact-value">Xavier University Ateneo De Cagayan</p>
+            </div>
+            <div class="fact">
+              <p class="fact-label">Graduated</p>
+              <p class="fact-value">Class 2025-2026</p>
+            </div>
+            <div class="fact">
+              <p class="fact-label">Available</p>
+              <p class="fact-value">Full-time · Internship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">// 02. skills</p>
+      <h2 class="section-title">Tech stack</h2>
+      <div class="skills-categories">
+        <div>
+          <p class="skill-category-label">Languages</p>
+          <div class="skill-chips">
+            <span class="chip"><span class="chip-dot"></span>Python</span>
+            <span class="chip"><span class="chip-dot"></span>JavaScript</span>
+            <span class="chip"><span class="chip-dot"></span>Java</span>
+            <span class="chip"><span class="chip-dot"></span>C++</span>
+            <span class="chip"><span class="chip-dot"></span>SQL</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-category-label">Frameworks & Libraries</p>
+          <div class="skill-chips">
+            <span class="chip"><span class="chip-dot"></span>React</span>
+            <span class="chip"><span class="chip-dot"></span>Node.js</span>
+            <span class="chip"><span class="chip-dot"></span>Express</span>
+            <span class="chip"><span class="chip-dot"></span>Django</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-category-label">Tools & Platforms</p>
+          <div class="skill-chips">
+            <span class="chip"><span class="chip-dot"></span>Git</span>
+            <span class="chip"><span class="chip-dot"></span>GitHub</span>
+            <span class="chip"><span class="chip-dot"></span>VS Code</span>
+            <span class="chip"><span class="chip-dot"></span>MySQL</span>
+            <span class="chip"><span class="chip-dot"></span>Firebase</span>
+            <span class="chip"><span class="chip-dot"></span>Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">// 03. projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-thumb">01</div>
+          <div class="project-body">
+            <h3 class="project-title">Project One Title</h3>
+            <p class="project-desc">
+              A short description of what this project does and the problem it solves.
+              Keep it to 2–3 sentences.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ GitHub</a>
+              <a href="#" class="project-link">↗ Live demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">02</div>
+          <div class="project-body">
+            <h3 class="project-title">Project Two Title</h3>
+            <p class="project-desc">
+              A short description of what this project does and the problem it solves.
+              Keep it to 2–3 sentences.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Django</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ GitHub</a>
+              <a href="#" class="project-link">↗ Live demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">03</div>
+          <div class="project-body">
+            <h3 class="project-title">Project Three Title</h3>
+            <p class="project-desc">
+              A short description of what this project does and the problem it solves.
+              Keep it to 2–3 sentences.
+            </p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ GitHub</a>
+              <a href="#" class="project-link">↗ Live demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">// 04. contact</p>
+      <h2 class="section-title">Get in touch</h2>
+      <div class="contact-grid">
+        <div class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" placeholder="Juan dela Cruz" />
+          </div>
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" id="email" placeholder="juan@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Hi, I'd like to talk about..."></textarea>
+          </div>
+          <button type="button" class="btn-primary" id="send-btn" onclick="handleSubmit()">Send message</button>
+          <p id="form-status"></p>
+        </div>
+        <div class="contact-info">
+          <p class="contact-info-title">Let's work together</p>
+          <p class="contact-info-text">
+            I'm currently open to full-time positions and internships.
+            Whether you have a question, an opportunity, or just want to say hi —
+            my inbox is always open!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:your@email.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              your@email.com
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" class="contact-item" target="_blank">
+              <span class="contact-icon">in</span>
+              linkedin.com/in/yourprofile
+            </a>
+            <a href="https://github.com/yourusername" class="contact-item" target="_blank">
+              <span class="contact-icon">&lt;/&gt;</span>
+              github.com/yourusername
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>Designed & built by <a href="#">Junier Gundaya</a> · 2026</p>
+  </footer>
+
+  <!-- Link to our external JavaScript — placed at the bottom so HTML loads first -->
+  <script src="script.js"></script>
+
+</body>
+</html>
