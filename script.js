@@ -1,13 +1,20 @@
 /* =============================================
    script.js — Portfolio JavaScript
    Sections:
-   1. Mobile hamburger menu
-   2. Active nav link on scroll
-   3. Contact form validation
+   1. EmailJS initialization
+   2. Mobile hamburger menu
+   3. Active nav link on scroll
+   4. Contact form with real email sending
 ============================================= */
 
 
-/* ── 1. MOBILE HAMBURGER MENU ─────────────── */
+/* ── 1. EMAILJS INITIALIZATION ────────────── */
+
+// Replace with your actual Public Key from emailjs.com → Account → General
+emailjs.init('sO6fV1HSX2u7qcrCs');
+
+
+/* ── 2. MOBILE HAMBURGER MENU ─────────────── */
 
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
@@ -25,7 +32,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 
-/* ── 2. ACTIVE NAV LINK ON SCROLL ─────────── */
+/* ── 3. ACTIVE NAV LINK ON SCROLL ─────────── */
 
 const sections = document.querySelectorAll('section[id]');
 const links    = document.querySelectorAll('.nav-links a');
@@ -35,24 +42,20 @@ window.addEventListener('scroll', () => {
   let current = '';
 
   sections.forEach(section => {
-    // If we've scrolled past the top of this section, mark it as current
     if (window.scrollY >= section.offsetTop - 80) {
       current = section.id;
     }
   });
 
-  // Update the color of each nav link based on which section is active
   links.forEach(link => {
-    if (link.getAttribute('href') === '#' + current) {
-      link.style.color = 'var(--navy)';   // active — dark color
-    } else {
-      link.style.color = '';              // inactive — revert to CSS default
-    }
+    link.style.color = link.getAttribute('href') === '#' + current
+      ? 'var(--navy)'
+      : '';
   });
 });
 
 
-/* ── 3. CONTACT FORM VALIDATION ───────────── */
+/* ── 4. CONTACT FORM WITH EMAILJS ─────────── */
 
 function handleSubmit() {
   const name    = document.getElementById('name').value.trim();
@@ -76,20 +79,40 @@ function handleSubmit() {
     return;
   }
 
-  // Show a loading state on the button
+  // Show loading state on the button
   btn.textContent = 'Sending...';
   btn.disabled    = true;
+  status.textContent = '';
 
-  // Simulate sending (we'll replace this with real EmailJS in Phase 4)
-  setTimeout(() => {
+  // Send via EmailJS
+  // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual values
+  emailjs.send(
+    'service_1ru7rks',    // e.g. 'service_abc123'
+    'template_skzuyz8',   // e.g. 'template_xyz789'
+    {
+      from_name:  name,
+      from_email: email,
+      message:    message
+    }
+  )
+  .then(() => {
+    // Success — email was sent
     status.style.color = '#22c55e';
-    status.textContent = 'Message sent! I\'ll get back to you soon.';
+    status.textContent = "Message sent! I'll get back to you soon.";
     btn.textContent    = 'Send message';
     btn.disabled       = false;
 
-    // Clear the form fields
+    // Clear the form
     document.getElementById('name').value    = '';
     document.getElementById('email').value   = '';
     document.getElementById('message').value = '';
-  }, 1000);
+  })
+  .catch((error) => {
+    // Something went wrong
+    status.style.color = '#ef4444';
+    status.textContent = 'Oops! Something went wrong. Please try again.';
+    btn.textContent    = 'Send message';
+    btn.disabled       = false;
+    console.error('EmailJS error:', error);
+  });
 }
